@@ -3,18 +3,69 @@
   
     
     <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/07/12/hello-world/</url>
-      <content type="html"><![CDATA[<p>안녕하세요, 테스트를 위한 글입니다.</p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+      <title><![CDATA[마크다운 참고자료]]></title>
+      <url>/2017/07/12/%E1%84%86%E1%85%A1%E1%84%8F%E1%85%B3%E1%84%83%E1%85%A1%E1%84%8B%E1%85%AE%E1%86%AB-%E1%84%8E%E1%85%A1%E1%86%B7%E1%84%80%E1%85%A9%E1%84%8C%E1%85%A1%E1%84%85%E1%85%AD/</url>
+      <content type="html"><![CDATA[<blockquote>
+<p>앞으로 블로그 글 작성을 위해 <a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="external">GitHub Markdown</a>을 참고하여 정리했습니다.</p>
+</blockquote>
+<h1 id="Markdown-Syntax"><a href="#Markdown-Syntax" class="headerlink" title="Markdown Syntax"></a>Markdown Syntax</h1><h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div><div class="line">#### H4</div><div class="line">##### H5</div><div class="line">###### H6</div></pre></td></tr></table></figure>
+<h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><p>…</p>
+<h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*italics*, _italics_</div><div class="line">**bold**, __bold__</div><div class="line">**bold and __italics__**</div><div class="line">~~strike~~</div></pre></td></tr></table></figure>
+<p><em>italics</em>, <em>italics</em><br><strong>bold</strong>, <strong>bold</strong><br><strong>bold and <strong>italics</strong></strong><br><del>strike</del></p>
+<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. One</div><div class="line">2. Two</div><div class="line">  1. One</div><div class="line">3. Three</div><div class="line">  * content</div><div class="line"></div><div class="line">- title</div><div class="line">  - content</div></pre></td></tr></table></figure>
+<ol>
+<li>One</li>
+<li>Two<ol>
+<li>One</li>
+</ol>
+</li>
+<li>Three<ul>
+<li>content</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>title<ul>
+<li>content</li>
+</ul>
+</li>
+</ul>
+<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Unsplash Source](Unsplash Source.jpg)</div></pre></td></tr></table></figure>
+<p><img src="Unsplash Source.jpg" alt="Unsplash Source"></p>
+<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[GitHub Markdown](https://guides.github.com/features/mastering-markdown)</div></pre></td></tr></table></figure>
+<p><a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="external">GitHub Markdown</a></p>
+<h2 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; A block quotation (also known as a long quotation or extract) is a quotation in a written document that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size font. - In [Wikipedia](https://en.wikipedia.org/wiki/Block_quotation)</div></pre></td></tr></table></figure>
+<blockquote>
+<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size font. - In <a href="https://en.wikipedia.org/wiki/Block_quotation" target="_blank" rel="external">Wikipedia</a></p>
+</blockquote>
+<h2 id="Inline-code"><a href="#Inline-code" class="headerlink" title="Inline code"></a>Inline code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello, `This is inline code.`</div></pre></td></tr></table></figure>
+<p>Hello, <code>This is inline code.</code></p>
+<h2 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">---</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="Syntax-highlighting"><a href="#Syntax-highlighting" class="headerlink" title="Syntax highlighting"></a>Syntax highlighting</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```java</div><div class="line">public void printHelloWorld() &#123;</div><div class="line">  System.out.println(&quot;Hello, World!&quot;);</div><div class="line">&#125;</div><div class="line">```</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printHelloWorld</span><span class="params">()</span> </span>&#123;</div><div class="line">  System.out.println(<span class="string">"Hello, World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">항목1 | 가운데 정렬 | 오른쪽 정렬</div><div class="line">---- | :----: | ----:</div><div class="line">첫번째 | 두번째 | 참고</div><div class="line">세번째 | 네번째 | 비고</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>항목1</th>
+<th style="text-align:center">가운데 정렬</th>
+<th style="text-align:right">오른쪽 정렬</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>첫번째</td>
+<td style="text-align:center">두번째</td>
+<td style="text-align:right">참고</td>
+</tr>
+<tr>
+<td>세번째</td>
+<td style="text-align:center">네번째</td>
+<td style="text-align:right">비고</td>
+</tr>
+</tbody>
+</table>
 ]]></content>
       
         <categories>
