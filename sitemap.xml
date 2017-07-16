@@ -3,7 +3,7 @@
 
     <sitemap>
         <loc>http://blog.jhko.me/post-sitemap.xml</loc>
-        <lastmod>2017-07-12T16:19:23.000Z</lastmod>
+        <lastmod>2017-07-16T12:14:36.000Z</lastmod>
     </sitemap>
 
     <sitemap>
@@ -13,12 +13,12 @@
 
     <sitemap>
         <loc>http://blog.jhko.me/category-sitemap.xml</loc>
-        <lastmod>2017-07-12T16:19:23.000Z</lastmod>
+        <lastmod>2017-07-16T12:14:36.000Z</lastmod>
     </sitemap>
 
     <sitemap>
         <loc>http://blog.jhko.me/tag-sitemap.xml</loc>
-        <lastmod>2017-07-12T16:19:23.000Z</lastmod>
+        <lastmod>2017-07-16T12:14:36.000Z</lastmod>
     </sitemap>
 
 </sitemapindex>

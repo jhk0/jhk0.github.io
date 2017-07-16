@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jhko.me/"/>
-  <updated>2017-07-12T16:19:23.000Z</updated>
+  <updated>2017-07-16T12:14:36.000Z</updated>
   <id>http://blog.jhko.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.jhko.me/2017/07/12/markdown-cheatsheet/"/>
     <id>http://blog.jhko.me/2017/07/12/markdown-cheatsheet/</id>
     <published>2017-07-12T14:43:18.000Z</published>
-    <updated>2017-07-12T16:19:23.000Z</updated>
+    <updated>2017-07-16T12:14:36.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>앞으로 블로그 글 작성을 위해 <a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="external">GitHub Markdown</a>을 참고하여 정리했습니다.</p>
@@ -92,7 +92,7 @@
     
     </summary>
     
-      <category term="Etc" scheme="http://blog.jhko.me/categories/Etc/"/>
+      <category term="etc" scheme="http://blog.jhko.me/categories/etc/"/>
     
     
       <category term="markdown" scheme="http://blog.jhko.me/tags/markdown/"/>
