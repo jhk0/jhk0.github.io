@@ -162,7 +162,7 @@
 </ul>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ol>
 <li><code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot; async&gt;&lt;/script&gt;</code><ul>
-<li><code>&lt;head&gt;</code>안에서 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>로 스크립트 파일을 불러오면 다 불러오기 전까지 다음 코드로 진행하지 않거나 HTML 엘레먼트를 선택하는 스크립트가 있다면 오류가 발생한다. 이를 보완하기 위해 <code>async</code>, <code>defer</code> 속성을 지원하게 되었으며 IE10 미만에서는 지원하지 않기 때문에 <body> 태그의 마지막 부분에서 스크립트 파일들을 호출하기도 한다.</body></li>
+<li><code>&lt;head&gt;</code>안에서 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>로 스크립트 파일을 불러오면 다 불러오기 전까지 다음 코드로 진행하지 않거나 HTML 엘리먼트를 선택하는 스크립트가 있다면 오류가 발생한다. 이를 보완하기 위해 <code>async</code>, <code>defer</code> 속성을 지원하게 되었으며 IE10 미만에서는 지원하지 않기 때문에 <body> 태그의 마지막 부분에서 스크립트 파일들을 호출하기도 한다.</body></li>
 <li><a href="https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup" target="_blank" rel="external">Where should I put script tags in HTML markup?  (StackOverflow)</a></li>
 <li><a href="https://developers.google.com/speed/docs/insights/BlockingJS" target="_blank" rel="external">Remove Render-Blocking JavaScript (Google Developers)</a></li>
 </ul>

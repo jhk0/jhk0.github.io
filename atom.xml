@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://blog.jhko.me/"/>
-  <updated>2017-07-20T18:27:06.000Z</updated>
+  <updated>2017-07-20T18:32:12.000Z</updated>
   <id>http://blog.jhko.me/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://blog.jhko.me/2017/07/17/javascript-basics/"/>
     <id>http://blog.jhko.me/2017/07/17/javascript-basics/</id>
     <published>2017-07-17T10:48:58.000Z</published>
-    <updated>2017-07-20T18:27:06.000Z</updated>
+    <updated>2017-07-20T18:32:12.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="Javascript-Basics"><a href="#Javascript-Basics" class="headerlink" title="Javascript Basics"></a>Javascript Basics</h1><h2 id="Primitive-data-types"><a href="#Primitive-data-types" class="headerlink" title="Primitive data types"></a>Primitive data types</h2><h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">5</span></div><div class="line"><span class="number">-1</span></div><div class="line"><span class="number">12.1</span></div><div class="line"></div><div class="line"><span class="number">3</span>+<span class="number">10</span>  <span class="comment">// 13</span></div><div class="line"><span class="number">1</span>/<span class="number">10</span>  <span class="comment">// 0.1</span></div><div class="line"><span class="number">10</span>%<span class="number">3</span>  <span class="comment">// 1</span></div></pre></td></tr></table></figure>
 <h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World"</span></div><div class="line"><span class="string">'Hello World'</span></div><div class="line"></div><div class="line"><span class="string">"abc"</span>+<span class="string">"def"</span>           <span class="comment">// abcdef</span></div><div class="line"><span class="string">"This is \"a dog\""</span>   <span class="comment">// This is "a dog"</span></div><div class="line"><span class="string">"Hello World"</span>.length  <span class="comment">// 11</span></div><div class="line"><span class="string">"hello"</span>[<span class="number">0</span>]            <span class="comment">// h</span></div><div class="line"><span class="string">"hi\\"</span>.length         <span class="comment">// 3</span></div></pre></td></tr></table></figure>
@@ -179,7 +179,7 @@
 </ul>
 <h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ol>
 <li><code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot; async&gt;&lt;/script&gt;</code><ul>
-<li><code>&lt;head&gt;</code>안에서 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>로 스크립트 파일을 불러오면 다 불러오기 전까지 다음 코드로 진행하지 않거나 HTML 엘레먼트를 선택하는 스크립트가 있다면 오류가 발생한다. 이를 보완하기 위해 <code>async</code>, <code>defer</code> 속성을 지원하게 되었으며 IE10 미만에서는 지원하지 않기 때문에 <body> 태그의 마지막 부분에서 스크립트 파일들을 호출하기도 한다.</body></li>
+<li><code>&lt;head&gt;</code>안에서 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>로 스크립트 파일을 불러오면 다 불러오기 전까지 다음 코드로 진행하지 않거나 HTML 엘리먼트를 선택하는 스크립트가 있다면 오류가 발생한다. 이를 보완하기 위해 <code>async</code>, <code>defer</code> 속성을 지원하게 되었으며 IE10 미만에서는 지원하지 않기 때문에 <body> 태그의 마지막 부분에서 스크립트 파일들을 호출하기도 한다.</body></li>
 <li><a href="https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup" target="_blank" rel="external">Where should I put script tags in HTML markup?  (StackOverflow)</a></li>
 <li><a href="https://developers.google.com/speed/docs/insights/BlockingJS" target="_blank" rel="external">Remove Render-Blocking JavaScript (Google Developers)</a></li>
 </ul>
