@@ -19,6 +19,12 @@ Layout: post, page, draft
 $ hexo publish [layout] <title>
 ```
 
+**Update Hexo**
+
+``` bash
+$ npm update hexo
+```
+
 **Start the server**
 
 ``` bash
@@ -29,12 +35,6 @@ $ hexo server
 
 ``` bash
 $ hexo generate
-```
-
-**Watch for file changes and regenerate files**
-
-``` bash
-$ hexo generate --watch
 ```
 
 **Clean generate static files**
