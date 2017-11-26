@@ -1,11 +1,422 @@
-<?xml version="1.0" encoding="utf-8"?>
-<search> 
+<!DOCTYPE html>
+
+
+
+
+<html class="theme-next mist" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+  <meta name="google-site-verification" content="-EQ5_5p0IHvgiFKF79XK2OJRolGaUZytgv9FjXXPJq8" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/favicon.ico?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="basic,scala," />
+
+
+
+
+
+  <link rel="alternate" href="http://blog.jhko.me/atom.xml" title="jhko's blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="Scala Basics Functional Programming Principles in Scala 수업을 듣는데 도움이 되기 위해 Scala Exercises에 있는 내용을 정리함.  Terms And Types123456789101112131415161                 // Numbertrue              // Boolean&quot;He">
+<meta name="keywords" content="basic,scala">
+<meta property="og:type" content="article">
+<meta property="og:title" content="스칼라(Scala) 기초">
+<meta property="og:url" content="http://blog.jhko.me/2017/11/27/scala-basics/index.html">
+<meta property="og:site_name" content="jhko&#39;s blog">
+<meta property="og:description" content="Scala Basics Functional Programming Principles in Scala 수업을 듣는데 도움이 되기 위해 Scala Exercises에 있는 내용을 정리함.  Terms And Types123456789101112131415161                 // Numbertrue              // Boolean&quot;He">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://blog.jhko.me/2017/11/27/scala-basics/scala_type_hierarchy.png">
+<meta property="og:image" content="http://blog.jhko.me/2017/11/27/scala-basics/animals.png">
+<meta property="og:updated_time" content="2017-11-26T17:45:57.617Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="스칼라(Scala) 기초">
+<meta name="twitter:description" content="Scala Basics Functional Programming Principles in Scala 수업을 듣는데 도움이 되기 위해 Scala Exercises에 있는 내용을 정리함.  Terms And Types123456789101112131415161                 // Numbertrue              // Boolean&quot;He">
+<meta name="twitter:image" content="http://blog.jhko.me/2017/11/27/scala-basics/scala_type_hierarchy.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"hide","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    tabs: true,
+    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://blog.jhko.me/2017/11/27/scala-basics/"/>
+
+
+
+
+
+  <title>스칼라(Scala) 기초 | jhko's blog</title>
+  
+
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-76201719-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
   
     
-    <entry>
-      <title><![CDATA[스칼라(Scala) 기초]]></title>
-      <url>/2017/11/27/scala-basics/</url>
-      <content type="html"><![CDATA[<h1 id="Scala-Basics"><a href="#Scala-Basics" class="headerlink" title="Scala Basics"></a>Scala Basics</h1><blockquote>
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">jhko's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            Search
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="Searching..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+<link href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css' rel='stylesheet' type='text/css' />
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://blog.jhko.me/2017/11/27/scala-basics/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jihoon Ko">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="jhko's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">스칼라(Scala) 기초</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-11-27T02:37:43+09:00">
+                2017-11-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Scala/" itemprop="url" rel="index">
+                    <span itemprop="name">Scala</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/27/scala-basics/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count"
+                        data-disqus-identifier="2017/11/27/scala-basics/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="Scala-Basics"><a href="#Scala-Basics" class="headerlink" title="Scala Basics"></a>Scala Basics</h1><blockquote>
 <p><a href="https://www.coursera.org/learn/progfun1/home" target="_blank" rel="external">Functional Programming Principles in Scala</a> 수업을 듣는데 도움이 되기 위해 <a href="https://www.scala-exercises.org/scala_tutorial" target="_blank" rel="external">Scala Exercises</a>에 있는 내용을 정리함.</p>
 </blockquote>
 <h2 id="Terms-And-Types"><a href="#Terms-And-Types" class="headerlink" title="Terms And Types"></a>Terms And Types</h2><figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="number">1</span>                 <span class="comment">// Number</span></div><div class="line"><span class="literal">true</span>              <span class="comment">// Boolean</span></div><div class="line"><span class="string">"Hello, Scala!"</span>   <span class="comment">// Text</span></div><div class="line"></div><div class="line"><span class="number">1</span> + <span class="number">2</span>                   <span class="comment">// = 3</span></div><div class="line"><span class="string">"Hello, "</span> ++ <span class="string">"Scala!"</span>   <span class="comment">// = "Hello, Scala!"</span></div><div class="line"></div><div class="line"><span class="comment">// Method calls</span></div><div class="line"><span class="string">"Hello, Scala!"</span>.size</div><div class="line"><span class="number">3</span> + <span class="number">2</span> == <span class="number">3.</span>+(<span class="number">2</span>)         <span class="comment">// Operators are methods.</span></div><div class="line"><span class="number">1.</span>to(<span class="number">10</span>) == <span class="number">1</span> to <span class="number">10</span>     <span class="comment">// Infix Syntax (%/%, %*%, %in%)</span></div><div class="line"></div><div class="line">(<span class="number">0</span> to <span class="number">3</span>).contains(<span class="number">3</span>) == <span class="literal">true</span></div><div class="line">(<span class="number">0</span> until <span class="number">3</span>).contains(<span class="number">3</span>) == <span class="literal">false</span></div><div class="line"><span class="string">"foo"</span>.drop(<span class="number">1</span>) == <span class="string">"oo"</span></div><div class="line"><span class="string">"bar"</span>.take(<span class="number">2</span>) == <span class="string">"ba"</span></div></pre></td></tr></table></figure>
@@ -513,382 +924,731 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rational</span>(<span class="params">x: <span class="type">Int</span>, y: <span class="type">Int</span></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">def</span> <span class="title">gcd</span></span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>): <span class="type">Int</span> = <span class="keyword">if</span> (b == <span class="number">0</span>) a <span class="keyword">else</span> gcd(b, a % b)</div><div class="line">  <span class="keyword">private</span> <span class="keyword">val</span> g = gcd(x, y)</div><div class="line"></div><div class="line">  <span class="keyword">lazy</span> <span class="keyword">val</span> numer: <span class="type">Int</span> = x / g</div><div class="line">  <span class="keyword">lazy</span> <span class="keyword">val</span> denom: <span class="type">Int</span> = y / g</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">val</span> compareRationals: (<span class="type">Rational</span>, <span class="type">Rational</span>) =&gt; <span class="type">Int</span> = (x, y) =&gt; x.numer * y.denom - x.denom * y.numer</div><div class="line"></div><div class="line"><span class="keyword">implicit</span> <span class="keyword">val</span> rationalOrder: <span class="type">Ordering</span>[<span class="type">Rational</span>] =</div><div class="line">  <span class="keyword">new</span> <span class="type">Ordering</span>[<span class="type">Rational</span>] &#123;</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">compare</span></span>(x: <span class="type">Rational</span>, y: <span class="type">Rational</span>): <span class="type">Int</span> = compareRationals(x, y)</div><div class="line">  &#125;</div><div class="line"></div><div class="line"><span class="keyword">val</span> half = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">val</span> third = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">3</span>)</div><div class="line"><span class="keyword">val</span> fourth = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">4</span>)</div><div class="line"><span class="keyword">val</span> rationals = <span class="type">List</span>(third, half, fourth)</div><div class="line">insertionSort(rationals)    <span class="comment">// List(fourth, third, half)</span></div></pre></td></tr></table></figure>]]></content>
+<figure class="highlight scala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Rational</span>(<span class="params">x: <span class="type">Int</span>, y: <span class="type">Int</span></span>) </span>&#123;</div><div class="line"></div><div class="line">  <span class="keyword">private</span> <span class="function"><span class="keyword">def</span> <span class="title">gcd</span></span>(a: <span class="type">Int</span>, b: <span class="type">Int</span>): <span class="type">Int</span> = <span class="keyword">if</span> (b == <span class="number">0</span>) a <span class="keyword">else</span> gcd(b, a % b)</div><div class="line">  <span class="keyword">private</span> <span class="keyword">val</span> g = gcd(x, y)</div><div class="line"></div><div class="line">  <span class="keyword">lazy</span> <span class="keyword">val</span> numer: <span class="type">Int</span> = x / g</div><div class="line">  <span class="keyword">lazy</span> <span class="keyword">val</span> denom: <span class="type">Int</span> = y / g</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">val</span> compareRationals: (<span class="type">Rational</span>, <span class="type">Rational</span>) =&gt; <span class="type">Int</span> = (x, y) =&gt; x.numer * y.denom - x.denom * y.numer</div><div class="line"></div><div class="line"><span class="keyword">implicit</span> <span class="keyword">val</span> rationalOrder: <span class="type">Ordering</span>[<span class="type">Rational</span>] =</div><div class="line">  <span class="keyword">new</span> <span class="type">Ordering</span>[<span class="type">Rational</span>] &#123;</div><div class="line">    <span class="function"><span class="keyword">def</span> <span class="title">compare</span></span>(x: <span class="type">Rational</span>, y: <span class="type">Rational</span>): <span class="type">Int</span> = compareRationals(x, y)</div><div class="line">  &#125;</div><div class="line"></div><div class="line"><span class="keyword">val</span> half = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">2</span>)</div><div class="line"><span class="keyword">val</span> third = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">3</span>)</div><div class="line"><span class="keyword">val</span> fourth = <span class="keyword">new</span> <span class="type">Rational</span>(<span class="number">1</span>, <span class="number">4</span>)</div><div class="line"><span class="keyword">val</span> rationals = <span class="type">List</span>(third, half, fourth)</div><div class="line">insertionSort(rationals)    <span class="comment">// List(fourth, third, half)</span></div></pre></td></tr></table></figure>
       
-        <categories>
-            
-            <category> Scala </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> basic </tag>
-            
-            <tag> scala </tag>
-            
-        </tags>
-        
-    </entry>
+    </div>
     
-    <entry>
-      <title><![CDATA[제이쿼리(jQuery) 기초]]></title>
-      <url>/2017/07/25/jquery-basics/</url>
-      <content type="html"><![CDATA[<h1 id="jQuery-Basics"><a href="#jQuery-Basics" class="headerlink" title="jQuery Basics"></a>jQuery Basics</h1><blockquote>
-<p>jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript. - <a href="http://jquery.com" target="_blank" rel="external">jQuery.com</a></p>
-</blockquote>
-<ul>
-<li><strong>Why use jQuery?</strong><ul>
-<li>Fixes “broken” DOM API</li>
-<li>Brevity and clarity</li>
-<li>Ease of use</li>
-<li>Cross-browser support</li>
-<li>Ajax</li>
-<li>Lot’s of people use jQuery.</li>
-</ul>
-</li>
-<li><strong>Why not use jQuery?</strong><ul>
-<li>The DOM API is no longer “broken”.</li>
-<li>It doesn’t do anything you can’t do on your own.</li>
-<li>It’s an unnecessary dependency.</li>
-<li>Performance</li>
-<li>Lot’s of people are moving away from jQuery.</li>
-</ul>
-</li>
-</ul>
-<h2 id="Add-jQuery"><a href="#Add-jQuery" class="headerlink" title="Add jQuery"></a>Add jQuery</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div></pre></td></tr></table></figure>
-<h2 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h2><p>Select elements with $(“selector”)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// all img tags</span></div><div class="line">$(<span class="string">"img"</span>)</div><div class="line"></div><div class="line"><span class="comment">// all element with class "sale"</span></div><div class="line">$(<span class="string">".sale"</span>)</div><div class="line"></div><div class="line"><span class="comment">// element with id "bonus"</span></div><div class="line">$(<span class="string">"#bonus"</span>)</div><div class="line"></div><div class="line"><span class="comment">// all a tags inside of li's</span></div><div class="line">$(<span class="string">"li a"</span>)</div></pre></td></tr></table></figure>
-<h2 id="Manipulating-style"><a href="#Manipulating-style" class="headerlink" title="Manipulating style"></a>Manipulating style</h2><p>$(“selector”).css(property, value)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#special"</span>).css(<span class="string">"border"</span>, <span class="string">"2px solid red"</span>);</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> styles = &#123;</div><div class="line">  <span class="attr">border</span>: <span class="string">"2px solid red"</span>,</div><div class="line">  <span class="attr">fontWeight</span>: <span class="string">"bold"</span></div><div class="line">&#125;</div><div class="line">$(<span class="string">"#special"</span>).css(styles);</div><div class="line"></div><div class="line">$(<span class="string">"div:first-of-type"</span>).css(<span class="string">"color"</span>, <span class="string">"pink"</span>);</div></pre></td></tr></table></figure>
-<h2 id="Common-methods"><a href="#Common-methods" class="headerlink" title="Common methods"></a>Common methods</h2><h3 id="Text-and-html"><a href="#Text-and-html" class="headerlink" title="Text and html"></a>Text and html</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"demo-container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"content"</span>&gt;</span>Demo content<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>first<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span>second<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>Get and set combined text contents</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"content"</span>).text();</div><div class="line"><span class="comment">// Output: Demo content first second</span></div><div class="line"></div><div class="line">$(<span class="string">"li"</span>).text(<span class="string">"Changed"</span>);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// &lt;div class="demo-container"&gt;</span></div><div class="line"><span class="comment">//   &lt;div class="content"&gt;Demo content&lt;/div&gt;</span></div><div class="line"><span class="comment">//   &lt;ul&gt;</span></div><div class="line"><span class="comment">//     &lt;li&gt;Changed&lt;/li&gt;</span></div><div class="line"><span class="comment">//     &lt;li&gt;Changed&lt;/li&gt;</span></div><div class="line"><span class="comment">//   &lt;/ul&gt;</span></div><div class="line"><span class="comment">// &lt;/div&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>Get and set HTML contents</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"ul"</span>).html();</div><div class="line"><span class="comment">// Output: &lt;li&gt;first&lt;/li&gt;  &lt;li&gt;second&lt;/li&gt;</span></div><div class="line"></div><div class="line">$(<span class="string">"ul"</span>).html(<span class="string">"&lt;li&gt;a new item&lt;/li&gt;"</span>);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// &lt;div class="demo-container"&gt;</span></div><div class="line"><span class="comment">//   &lt;div class="content"&gt;Demo content&lt;/div&gt;</span></div><div class="line"><span class="comment">//   &lt;ul&gt;</span></div><div class="line"><span class="comment">//     &lt;li&gt;a new item&lt;/li&gt;</span></div><div class="line"><span class="comment">//   &lt;/ul&gt;</span></div><div class="line"><span class="comment">// &lt;/div&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Attr-and-val"><a href="#Attr-and-val" class="headerlink" title="Attr and val"></a>Attr and val</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"http://www.gstatic.com/webp/gallery/1.jpg"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p><strong>Get and Set the value of an attribute for the first element.</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"src"</span>);</div><div class="line"><span class="comment">// Output: http://www.gstatic.com/webp/gallery/1.jpg</span></div><div class="line"></div><div class="line">$(<span class="string">"img"</span>).attr(<span class="string">"title"</span>, <span class="string">"This is sample"</span>);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// &lt;img src="http://www.gstatic.com/webp/gallery/1.jpg" title="This is sample"&gt;</span></div></pre></td></tr></table></figure>
-<ul>
-<li><a href="http://api.jquery.com/attr/" target="_blank" rel="external">attr() vs prop() (jQuery APi)</a><ul>
-<li>To retrieve and change DOM properties such as the checked, selected, or disabled state of form elements, use the .prop() method. (related to boolean attributes)</li>
-</ul>
-</li>
-</ul>
-<p><strong>Get and set the values of the first form elements.</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"input"</span>).val();</div><div class="line">$(<span class="string">"input"</span>).val(<span class="string">"put something"</span>);</div></pre></td></tr></table></figure>
-<h3 id="Manipulating-class"><a href="#Manipulating-class" class="headerlink" title="Manipulating class"></a>Manipulating class</h3><p><strong>Add and remove classes</strong></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"p"</span>).addClass(<span class="string">"correct"</span>);</div><div class="line">$(<span class="string">"p"</span>).removeClass(<span class="string">"correct"</span>);</div><div class="line">$(<span class="string">"p"</span>).toggleClass(<span class="string">"correct"</span>);</div></pre></td></tr></table></figure>
-<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><h3 id="Click"><a href="#Click" class="headerlink" title="Click"></a>Click</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"#submit"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"Complete submit"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">"#submit"</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="keyword">this</span>).css(<span class="string">"background"</span>, <span class="string">"blue"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://stackoverflow.com/questions/1051782/jquery-whats-the-difference-between-this-and-this" target="_blank" rel="external">jQuery: What’s the difference between ‘$(this)’ and ‘this’? (StackOverflow)</a><ul>
-<li>Basically every time you get a set of elements back jQuery turns it into a jQuery object.</li>
-</ul>
-</li>
-</ul>
-<h3 id="Keypress"><a href="#Keypress" class="headerlink" title="Keypress"></a>Keypress</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"input"</span>).keypress(<span class="function"><span class="keyword">function</span>(<span class="params">event</span>)</span>&#123;</div><div class="line">  <span class="keyword">if</span>(event.which === <span class="number">13</span>) &#123;</div><div class="line">    alert(<span class="string">"You hit enter"</span>);</div><div class="line">  &#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="http://howtodoinjava.com/scripting/jquery/jquery-difference-between-keypress-and-keydown-events/" target="_blank" rel="external">jQuery – Difference between Keypress and Keydown Events (HowToDoInJava)</a></li>
-</ul>
-<h3 id="On"><a href="#On" class="headerlink" title="On"></a>On</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"submit"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"Clicked"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">"submit"</span>).on(<span class="string">"dblclick"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(<span class="string">"Clicked"</span>);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<ul>
-<li>click() only adds listeners for existing element.</li>
-<li>on() will add listeners for all potential future elements.</li>
-<li><a href="https://stackoverflow.com/questions/9122078/difference-between-onclick-vs-click" target="_blank" rel="external">Difference between .on(‘click’) vs .click() (StackOverflow)</a></li>
-</ul>
-<h2 id="Effects"><a href="#Effects" class="headerlink" title="Effects"></a>Effects</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">"button"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">"div"</span>).fadeOut(<span class="number">1000</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"Fade Completed!"</span>); <span class="comment">// Callback function</span></div><div class="line">    $(<span class="keyword">this</span>).remove();</div><div class="line">  &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">$(<span class="string">"button"</span>).on(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  $(<span class="string">"div"</span>).slideUp();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-]]></content>
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
-        <categories>
-            
-            <category> Javascript </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> javascript </tag>
-            
-            <tag> basic </tag>
-            
-            <tag> jquery </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[자바스크립트(Javascript) 기초]]></title>
-      <url>/2017/07/17/javascript-basics/</url>
-      <content type="html"><![CDATA[<h1 id="Javascript-Basics"><a href="#Javascript-Basics" class="headerlink" title="Javascript Basics"></a>Javascript Basics</h1><h2 id="Primitive-data-types"><a href="#Primitive-data-types" class="headerlink" title="Primitive data types"></a>Primitive data types</h2><h3 id="Numbers"><a href="#Numbers" class="headerlink" title="Numbers"></a>Numbers</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="number">5</span></div><div class="line"><span class="number">-1</span></div><div class="line"><span class="number">12.1</span></div><div class="line"></div><div class="line"><span class="number">3</span>+<span class="number">10</span>  <span class="comment">// 13</span></div><div class="line"><span class="number">1</span>/<span class="number">10</span>  <span class="comment">// 0.1</span></div><div class="line"><span class="number">10</span>%<span class="number">3</span>  <span class="comment">// 1</span></div></pre></td></tr></table></figure>
-<h3 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">"Hello World"</span></div><div class="line"><span class="string">'Hello World'</span></div><div class="line"></div><div class="line"><span class="string">"abc"</span>+<span class="string">"def"</span>           <span class="comment">// abcdef</span></div><div class="line"><span class="string">"This is \"a dog\""</span>   <span class="comment">// This is "a dog"</span></div><div class="line"><span class="string">"Hello World"</span>.length  <span class="comment">// 11</span></div><div class="line"><span class="string">"hello"</span>[<span class="number">0</span>]            <span class="comment">// h</span></div><div class="line"><span class="string">"hi\\"</span>.length         <span class="comment">// 3</span></div></pre></td></tr></table></figure>
-<h3 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="literal">true</span></div><div class="line"><span class="literal">false</span></div></pre></td></tr></table></figure>
-<h3 id="Null-and-undefined"><a href="#Null-and-undefined" class="headerlink" title="Null and undefined"></a>Null and undefined</h3><p><strong>Null</strong>: It can be assigned to a variable as a representation of no value. (Object)</p>
-<p><strong>Undefined</strong>: A variable has been declared but has not yet been assigned a value. (A Type itself)</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// null</span></div><div class="line"><span class="keyword">var</span> player = <span class="string">"Jihoon"</span>;</div><div class="line">player = <span class="literal">null</span>;</div><div class="line"></div><div class="line"><span class="comment">// undefined</span></div><div class="line"><span class="keyword">var</span> name;</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://stackoverflow.com/questions/5076944/what-is-the-difference-between-null-and-undefined-in-javascript" target="_blank" rel="external">What is the difference between null and undefined in JavaScript? (StackOverflow)</a></li>
-</ul>
-<h2 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">"Jihoon"</span>;</div><div class="line"><span class="keyword">var</span> number = <span class="number">111</span>;</div><div class="line"><span class="keyword">var</span> isNumber = <span class="literal">true</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> name = <span class="string">"Jihoon"</span>;</div><div class="line"><span class="string">"Hello "</span> + name       <span class="comment">// Hello Jihoon</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> num = <span class="number">100</span>;</div><div class="line">num + <span class="number">11</span> + <span class="number">10</span>         <span class="comment">// 121</span></div><div class="line"></div><div class="line"><span class="comment">// Dynamically Typed, and Weakly Typed.</span></div><div class="line"><span class="keyword">var</span> name = <span class="string">"Jihoon"</span>;</div><div class="line">name = <span class="number">50</span>;</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://stackoverflow.com/questions/964910/is-javascript-an-untyped-language" target="_blank" rel="external">Is JavaScript an untyped language? (StackOverflow)</a></li>
-</ul>
-<h2 id="Useful-built-in-methods"><a href="#Useful-built-in-methods" class="headerlink" title="Useful built-in methods"></a>Useful built-in methods</h2><ul>
-<li>alert(“Message”);</li>
-<li>console.log(“Message”);</li>
-<li>prompt(“What is your name?”);<ul>
-<li>var userName = prompt(“What is your name?”);</li>
-</ul>
-</li>
-</ul>
-<h2 id="Control-Flow"><a href="#Control-Flow" class="headerlink" title="Control Flow"></a>Control Flow</h2><h3 id="Boolean-logic"><a href="#Boolean-logic" class="headerlink" title="Boolean logic"></a>Boolean logic</h3><p>When x = 5,</p>
-<table>
-<thead>
-<tr>
-<th>Example</th>
-<th>Result</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>x &gt; 10</td>
-<td>false</td>
-<td></td>
-</tr>
-<tr>
-<td>x &gt;= 5</td>
-<td>true</td>
-<td></td>
-</tr>
-<tr>
-<td>x &lt; -10</td>
-<td>false</td>
-<td></td>
-</tr>
-<tr>
-<td>x == “5”</td>
-<td>true</td>
-<td>Equal to</td>
-</tr>
-<tr>
-<td>x != “a”</td>
-<td>true</td>
-<td>Not equal to</td>
-</tr>
-<tr>
-<td>x === “5”</td>
-<td>false</td>
-<td>Equal value and type</td>
-</tr>
-<tr>
-<td>x !== “5”</td>
-<td>true</td>
-<td>Not equal value and equal type</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line">x == <span class="string">"10"</span>;  <span class="comment">// ture</span></div><div class="line">x === <span class="string">"10"</span>; <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> y = <span class="literal">null</span>;</div><div class="line">y == <span class="literal">undefined</span>  <span class="comment">// true</span></div><div class="line">y === <span class="literal">undefined</span> <span class="comment">// false</span></div><div class="line"></div><div class="line"><span class="literal">true</span> == <span class="string">"1"</span>       <span class="comment">// true</span></div><div class="line"><span class="number">0</span> === <span class="literal">false</span>       <span class="comment">// true</span></div><div class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">// true</span></div><div class="line"><span class="literal">NaN</span> == <span class="literal">NaN</span>        <span class="comment">// false (not a number)</span></div></pre></td></tr></table></figure>
-<h3 id="Logical-operators"><a href="#Logical-operators" class="headerlink" title="Logical operators"></a>Logical operators</h3><table>
-<thead>
-<tr>
-<th>Operator</th>
-<th>Name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>&amp;&amp;</td>
-<td>AND</td>
-</tr>
-<tr>
-<td>||</td>
-<td>OR</td>
-</tr>
-<tr>
-<td>!</td>
-<td>NOT</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> x = <span class="number">10</span>;</div><div class="line"><span class="keyword">var</span> y = <span class="string">"a"</span>;</div><div class="line"></div><div class="line">y === <span class="string">"b"</span> || x &gt;= <span class="number">10</span>  <span class="comment">// true</span></div><div class="line"></div><div class="line">x = <span class="number">3</span>;</div><div class="line">y = <span class="number">8</span>;</div><div class="line"></div><div class="line">!(x == <span class="string">"3"</span> || x === y) &amp;&amp; !(y != <span class="number">8</span> &amp;&amp; x &lt;= y) <span class="comment">// false</span></div><div class="line"></div><div class="line"></div><div class="line">!<span class="string">"Hello World"</span>  <span class="comment">// false</span></div><div class="line">!!<span class="string">""</span>            <span class="comment">// false</span></div><div class="line">!!<span class="literal">null</span>          <span class="comment">// false</span></div><div class="line">!!<span class="number">0</span>             <span class="comment">// false</span></div><div class="line">!!<span class="literal">NaN</span>           <span class="comment">// false</span></div><div class="line">!!<span class="number">-1</span>            <span class="comment">// true</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">""</span>;</div><div class="line"><span class="keyword">var</span> msg = <span class="string">"hello"</span></div><div class="line"><span class="keyword">var</span> isFunny = <span class="string">"false"</span></div><div class="line"></div><div class="line">!((str || msg  &amp;&amp; isFunny)) <span class="comment">// false</span></div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://developer.mozilla.org/ko/docs/Glossary/Truthy" target="_blank" rel="external">Truthy (MDN)</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Falsy" target="_blank" rel="external">Falsy (MDN)</a></li>
-</ul>
-<h3 id="Conditionals"><a href="#Conditionals" class="headerlink" title="Conditionals"></a>Conditionals</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (age &lt; <span class="number">18</span>) &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"Sorry, you are not old enough."</span>);</div><div class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (age &lt; <span class="number">21</span>) &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"You can enter, but cannot drink."</span>);</div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"Come on in. You can drink."</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> guess = prompt(<span class="string">"Guess a number"</span>);</div><div class="line"></div><div class="line"><span class="keyword">if</span> (<span class="built_in">Number</span>(guess) === <span class="number">10</span>) &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"Right!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://www.w3schools.com/jsref/jsref_number.asp" target="_blank" rel="external">JavaScript Number() Function</a></li>
-</ul>
-<h3 id="Loops"><a href="#Loops" class="headerlink" title="Loops"></a>Loops</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> count = <span class="number">1</span>;</div><div class="line"></div><div class="line"><span class="keyword">while</span> (count &lt; <span class="number">4</span>) &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"count is: "</span> + count);</div><div class="line">	count++;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// count is: 1</span></div><div class="line"><span class="comment">// count is: 2</span></div><div class="line"><span class="comment">// count is: 3</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">4</span>; i++) &#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"count is: "</span> + i);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// count is: 1</span></div><div class="line"><span class="comment">// count is: 2</span></div><div class="line"><span class="comment">// count is: 3</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"ahceclwlxo"</span>;</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; str.length; i+=<span class="number">2</span>) &#123;</div><div class="line">	<span class="built_in">console</span>.log(str[i]);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// h</span></div><div class="line"><span class="comment">// e</span></div><div class="line"><span class="comment">// l</span></div><div class="line"><span class="comment">// l</span></div><div class="line"><span class="comment">// o</span></div></pre></td></tr></table></figure>
-<h2 id="Functions"><a href="#Functions" class="headerlink" title="Functions"></a>Functions</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//function declaration</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">capitalize</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> str.charAt(<span class="number">0</span>).toUpperCase() + str.slice(<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">capitalize(<span class="string">"paris"</span>);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// Paris</span></div><div class="line"></div><div class="line"><span class="comment">// function expression</span></div><div class="line"><span class="keyword">var</span> capitalize = <span class="function"><span class="keyword">function</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> str.charAt(<span class="number">0</span>).toUpperCase() + str.slice(<span class="number">1</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">capitalize(<span class="string">"paris"</span>);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// Paris</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> doStep = <span class="function"><span class="keyword">function</span> <span class="title">nextStep</span>(<span class="params">step</span>) </span>&#123;</div><div class="line">	<span class="keyword">if</span> (step &gt; <span class="number">0</span>) &#123;</div><div class="line">		<span class="built_in">console</span>.log(<span class="string">"Step! : "</span> + <span class="keyword">this</span>.name);</div><div class="line">		nextStep.call(<span class="keyword">this</span>, step - <span class="number">1</span>);</div><div class="line">	&#125;</div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> person = &#123;<span class="attr">name</span>: <span class="string">"stranger"</span>, <span class="attr">walk</span>: doStep&#125;;</div><div class="line">person.walk(<span class="number">5</span>);</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> unikys = &#123;</div><div class="line">	 <span class="attr">yell</span>: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">		 <span class="built_in">console</span>.log(<span class="string">"YELL!"</span>);</div><div class="line">	 &#125;</div><div class="line"> &#125;;</div><div class="line"> unikys.yell();</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> callback = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</div><div class="line"> <span class="built_in">console</span>.log(<span class="string">"Mouse clicked!"</span>);</div><div class="line">&#125;;</div><div class="line"><span class="built_in">document</span>.body.addEventListener(<span class="string">"click"</span>, callback);</div><div class="line"></div><div class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"return a+b;"</span>);</div><div class="line"><span class="built_in">console</span>.log(func(<span class="number">5</span>, <span class="number">6</span>) === <span class="number">11</span>);</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="http://unikys.tistory.com/305" target="_blank" rel="external">[속깊은 자바스크립트 강좌] function declaration vs function expression 차이점</a></li>
-</ul>
-<h2 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doMath</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> x = <span class="number">1</span>;</div><div class="line">	<span class="built_in">console</span>.log(x);</div><div class="line">&#125;</div><div class="line"></div><div class="line">doMath();</div><div class="line"><span class="comment">// Output: 1</span></div><div class="line"><span class="built_in">console</span>.log(x);</div><div class="line"><span class="comment">// Error, x is not defined.</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> y = <span class="number">1</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	y = <span class="number">10</span>;</div><div class="line">	<span class="built_in">console</span>.log(y);</div><div class="line">&#125;</div><div class="line"></div><div class="line">doSomething();</div><div class="line"><span class="comment">// Output: 10</span></div><div class="line"><span class="built_in">console</span>.log(y);</div><div class="line"><span class="comment">// Output: 10;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> phrase = <span class="string">"Hi there!"</span>;</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">doSomething</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">var</span> phrase = <span class="string">"Goodbye!"</span>;</div><div class="line">	<span class="built_in">console</span>.log(phrase);</div><div class="line">&#125;</div><div class="line"></div><div class="line">doSomething();</div><div class="line"><span class="comment">// Output: GoodBye!</span></div><div class="line"><span class="built_in">console</span>.log(phrase);</div><div class="line"><span class="comment">// Output: Hi there!</span></div></pre></td></tr></table></figure>
-<h2 id="Higher-order-functions"><a href="#Higher-order-functions" class="headerlink" title="Higher order functions"></a>Higher order functions</h2><p>A higher-order function is a function that can take another function as an argument, or that returns a function as a result.</p>
-<ul>
-<li>First Class Functions<ul>
-<li>Functions in JavaScript are treated as objects.</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Taking Functions as Arguments.</span></div><div class="line"><span class="keyword">var</span> proveIt = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	alert(<span class="string">"you triggered "</span> + <span class="keyword">this</span>.id);</div><div class="line">&#125;;</div><div class="line"><span class="built_in">document</span>.getElementById(<span class="string">"clicker"</span>).addEventListener(<span class="string">"click"</span>, proveIt);</div><div class="line"></div><div class="line"><span class="comment">// Returning Functions as Results.</span></div><div class="line"><span class="keyword">var</span> snakify = <span class="function"><span class="keyword">function</span>(<span class="params">text</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> text.replace(<span class="regexp">/millenials/ig</span>, <span class="string">"Snake People"</span>);</div><div class="line">&#125;;</div><div class="line"><span class="built_in">console</span>.log(snakify(<span class="string">"The Millenials are always up to something."</span>));</div><div class="line"><span class="comment">// Output: The Snake People are always up to something.</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> attitude = <span class="function"><span class="keyword">function</span>(<span class="params">original, replacement, source</span>) </span>&#123;</div><div class="line">	<span class="keyword">return</span> <span class="function"><span class="keyword">function</span>(<span class="params">source</span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> source.replace(original, replacement);</div><div class="line">	&#125;;</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> snakify = attitude(<span class="regexp">/millenials/ig</span>, <span class="string">"Snake People"</span>);</div><div class="line"><span class="keyword">var</span> hippify = attitude(<span class="regexp">/baby boomers/ig</span>, <span class="string">"Aging Hippies"</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(snakify(<span class="string">"The Millenials are always up to something."</span>));</div><div class="line"><span class="comment">// Output: The Snake People are always up to something.</span></div><div class="line"><span class="built_in">console</span>.log(hippify(<span class="string">"The Baby Boomers just look the other way."</span>));</div><div class="line"><span class="comment">// Output: The Aging Hippies just look the other way.</span></div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://www.sitepoint.com/higher-order-functions-javascript/" target="_blank" rel="external">Higher-Order Functions in JavaScript</a></li>
-</ul>
-<h2 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> friends = [<span class="string">"Charlie"</span>, <span class="string">"Liz"</span>, <span class="string">"David"</span>, <span class="string">"Mattias"</span>];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(friends[<span class="number">0</span>]);</div><div class="line"><span class="comment">// Output: Charlie</span></div><div class="line"></div><div class="line">friends[<span class="number">0</span>] = <span class="string">"Amelie"</span>;  <span class="comment">// Edit data</span></div><div class="line">friends[<span class="number">4</span>] = <span class="string">"Andrea"</span>   <span class="comment">// Add data</span></div><div class="line"></div><div class="line"><span class="comment">// Initialize an empty array</span></div><div class="line"><span class="keyword">var</span> friends = [];</div><div class="line"><span class="keyword">var</span> friends = <span class="keyword">new</span> <span class="built_in">Array</span>();</div><div class="line"></div><div class="line"><span class="keyword">var</span> random_collection = [<span class="number">4</span>, <span class="literal">true</span>, <span class="string">"abc"</span>, <span class="literal">null</span>];</div><div class="line"><span class="built_in">console</span>.log(random_collection.length);</div><div class="line"><span class="comment">// Output: 4</span></div></pre></td></tr></table></figure>
-<h3 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"orange"</span>, <span class="string">"yellow"</span>];</div><div class="line"></div><div class="line">colors.push(<span class="string">"green"</span>);     <span class="comment">// ["red", "orange", "yellow", "green"]</span></div><div class="line"><span class="keyword">var</span> color = colors.pop(); <span class="comment">// ["red", "orange", "yellow"]</span></div><div class="line"><span class="built_in">console</span>.log(color);</div><div class="line"><span class="comment">// Output: Green</span></div><div class="line"></div><div class="line">colors.unshift(<span class="string">"blue"</span>); <span class="comment">// ["blue", "red", "orange", "yellow"]</span></div><div class="line">colors.shift();         <span class="comment">// ["red", "orange", "yellow"]</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> index = colors.indexOf(<span class="string">"red"</span>);</div><div class="line"><span class="built_in">console</span>.log(index);</div><div class="line"><span class="comment">// Output: 0</span></div><div class="line"><span class="built_in">console</span>.log(colors.indexOf(<span class="string">"black"</span>))</div><div class="line"><span class="comment">// Output: -1</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> carColors = colors.slice(<span class="number">0</span>, <span class="number">2</span>);</div><div class="line"><span class="built_in">console</span>.log(carColors);</div><div class="line"><span class="comment">// Output: ["red", "orange"]</span></div><div class="line"><span class="built_in">console</span>.log(colors);</div><div class="line"><span class="comment">// Output: ["red", "orange", "yellow"]</span></div></pre></td></tr></table></figure>
-<h3 id="Iteration"><a href="#Iteration" class="headerlink" title="Iteration"></a>Iteration</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"orange"</span>, <span class="string">"yellow"</span>];</div><div class="line"></div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; colors.length; i++) &#123;</div><div class="line">	<span class="built_in">console</span>.log(colors[i]);</div><div class="line">&#125;</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// orange</span></div><div class="line"><span class="comment">// yellow</span></div><div class="line"></div><div class="line">colors.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">color</span>)) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(color);</div><div class="line">&#125;</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// orange</span></div><div class="line"><span class="comment">// yellow</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">printColor</span>(<span class="params">color</span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(color);</div><div class="line">&#125;</div><div class="line">colors.forEach(printColor);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// orange</span></div><div class="line"><span class="comment">// yellow</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> count = <span class="number">0</span>;</div><div class="line"><span class="keyword">while</span> (count &lt; colors.length) &#123;</div><div class="line">	<span class="built_in">console</span>.log(colors[count]);</div><div class="line">	count++;</div><div class="line">&#125;</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// orange</span></div><div class="line"><span class="comment">// yellow</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="built_in">Array</span>.prototype.myForEach = <span class="function"><span class="keyword">function</span>(<span class="params">func</span>) </span>&#123;</div><div class="line">	<span class="keyword">for</span> (<span class="keyword">var</span> i =<span class="number">0</span>; i &lt; <span class="keyword">this</span>.length; i++) &#123;</div><div class="line">		func(<span class="keyword">this</span>[i]);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">colors.myForEach(<span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(name);</div><div class="line">&#125;);</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// red</span></div><div class="line"><span class="comment">// orange</span></div><div class="line"><span class="comment">// yellow</span></div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" target="_blank" rel="external">Array.prototype.forEach() (MDN)</a></li>
-</ul>
-<h2 id="Objects"><a href="#Objects" class="headerlink" title="Objects"></a>Objects</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Array</span></div><div class="line"><span class="keyword">var</span> person = [<span class="string">"Cindy"</span>, <span class="number">32</span>, <span class="string">"Missoula"</span>];</div><div class="line"></div><div class="line"><span class="comment">// Object: store data in key-value pairs.</span></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">	<span class="attr">name</span>: <span class="string">"Cindy"</span>,</div><div class="line">	<span class="attr">age</span>: <span class="number">32</span>,</div><div class="line">	<span class="attr">city</span>: <span class="string">"Missoula"</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(persion[<span class="string">"name"</span>]); <span class="comment">// Output: Cindy</span></div><div class="line"><span class="built_in">console</span>.log(person.name);     <span class="comment">// Output: Cindy</span></div><div class="line"></div><div class="line">person[<span class="string">"age"</span>] += <span class="number">1</span>;</div><div class="line">person.city = <span class="string">"London"</span>;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Create objects</span></div><div class="line"><span class="keyword">var</span> person = &#123;&#125;;</div><div class="line">person.name = <span class="string">"Travis"</span>;</div><div class="line">person.age = <span class="number">20</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">	<span class="attr">name</span>: <span class="string">"Travis"</span>,</div><div class="line">	<span class="attr">age</span>: <span class="number">20</span></div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">"Travis"</span>;</div><div class="line">person.age = <span class="number">20</span>;</div><div class="line"></div><div class="line"><span class="keyword">var</span> junkObject = &#123;</div><div class="line">	<span class="attr">age</span>: <span class="number">20</span>,</div><div class="line">	<span class="attr">color</span>: <span class="string">"blue"</span>,</div><div class="line">	<span class="attr">friends</span>: [<span class="string">"Travis"</span>, <span class="string">"Cindy"</span>],</div><div class="line">	<span class="attr">pet</span>: &#123;</div><div class="line">		<span class="attr">species</span>: <span class="string">"Dog"</span>,</div><div class="line">		<span class="attr">age</span>: <span class="number">2</span></div><div class="line">	&#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">someObject<span class="number">.1</span>blah    <span class="comment">// Invalid: can't start with number.</span></div><div class="line">someObject[<span class="string">"1blah"</span>] <span class="comment">// Valid</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">"name"</span>;</div><div class="line">someObject.str  <span class="comment">// Invalid</span></div><div class="line">someObject[str] <span class="comment">// Valid</span></div><div class="line"></div><div class="line">someObject.fav color    <span class="comment">//Invalid</span></div><div class="line">someObject[<span class="string">"fav color"</span>] <span class="comment">// Valid</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// Object with method</span></div><div class="line"><span class="keyword">var</span> obj = &#123;</div><div class="line">	<span class="attr">name</span>: <span class="string">"Chunk"</span>,</div><div class="line">	<span class="attr">age</span>: <span class="number">45</span>,</div><div class="line">	<span class="attr">isCool</span>: <span class="literal">false</span>,</div><div class="line">	<span class="attr">friends</span>: [<span class="string">"bob"</span>, <span class="string">"tina"</span>],</div><div class="line">	<span class="attr">add</span>: <span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>&#123;</div><div class="line">		<span class="keyword">return</span> x+y;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Like namespace</span></div><div class="line"><span class="keyword">var</span> dog = &#123;</div><div class="line">	<span class="attr">speak</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">"WOOF!"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> cat = &#123;</div><div class="line">	<span class="attr">speak</span>: <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">return</span> <span class="string">"MEOW!"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">dog.speak();  <span class="comment">// Output: WOOF!</span></div><div class="line">cat.speak();  <span class="comment">// Output: MEOW!</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> comments = &#123;&#125;;</div><div class="line"></div><div class="line">comments.data = [<span class="string">"Good Job!"</span>, <span class="string">"Bye"</span>, <span class="string">"Hey"</span>];</div><div class="line"></div><div class="line">comments.print = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="keyword">this</span>.data.forEach(<span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</div><div class="line">		<span class="built_in">console</span>.log(el);</div><div class="line">	&#125;);</div><div class="line">&#125;</div><div class="line"></div><div class="line">comments.print();</div><div class="line"><span class="comment">// Output</span></div><div class="line"><span class="comment">// Good Job!</span></div><div class="line"><span class="comment">// Bye</span></div><div class="line"><span class="comment">// Hey</span></div></pre></td></tr></table></figure>
-<h2 id="DOM"><a href="#DOM" class="headerlink" title="DOM"></a>DOM</h2><ul>
-<li>Document Object Model<ul>
-<li>The interface between Javascript and HTML+CSS</li>
-<li>The browser turns every HTML tags into a Javascript object.</li>
-</ul>
-</li>
-</ul>
-<h3 id="Selectors"><a href="#Selectors" class="headerlink" title="Selectors"></a>Selectors</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>Goodbye<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line">	<span class="tag">&lt;<span class="name">ul</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">id</span>=<span class="string">"highlight"</span>&gt;</span>List Item 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"bolded"</span>&gt;</span>List Item 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">		<span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"bolded"</span>&gt;</span>List Item 3<span class="tag">&lt;/<span class="name">li</span>&gt;</span></div><div class="line">	<span class="tag">&lt;/<span class="name">ul</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.getElementById(<span class="string">"highlight"</span>);</div><div class="line"><span class="built_in">console</span>.log(tag); <span class="comment">// Output: &lt;li id="highlight"&gt;List Item 1&lt;/li&gt;</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> tags = <span class="built_in">document</span>.getElementsByClassName(<span class="string">"bolded"</span>);</div><div class="line"><span class="built_in">console</span>.log(tags[<span class="number">0</span>]);  <span class="comment">// Output: &lt;li class="bolded"&gt;List Item 2&lt;/li&gt;</span></div><div class="line"></div><div class="line">tags = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"li"</span>);</div><div class="line"><span class="built_in">console</span>.log(tags[<span class="number">0</span>]); <span class="comment">// Output: &lt;li id="highlight"&gt;List Item 1&lt;/li&gt;</span></div><div class="line"></div><div class="line"><span class="comment">// Returns the first element that matches a given CSS-style selector.</span></div><div class="line">tag = <span class="built_in">document</span>.querySelector(<span class="string">"#highlight"</span>);</div><div class="line">tag = <span class="built_in">document</span>.querySelector(<span class="string">".bolded"</span>);</div><div class="line">tag = <span class="built_in">document</span>.querySelector(<span class="string">"h1"</span>);</div><div class="line"></div><div class="line">tags = <span class="built_in">document</span>.querySelectorAll(<span class="string">"h1"</span>);</div><div class="line"><span class="built_in">console</span>.log(tags[<span class="number">0</span>]);  <span class="comment">// Output: &lt;h1&gt;Hello&lt;/h1&gt;</span></div></pre></td></tr></table></figure>
-<h3 id="Manipulating-style"><a href="#Manipulating-style" class="headerlink" title="Manipulating style"></a>Manipulating style</h3><p>Recommended for styles to be defined in a separate file or files.</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.some-class</span> &#123;</div><div class="line">	<span class="attribute">color</span>: blue;</div><div class="line">	<span class="attribute">border</span>: <span class="number">10px</span> solid red;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// This is bad.</span></div><div class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.getElementById(<span class="string">"highlight"</span>);</div><div class="line">tag.style.color = <span class="string">"blue"</span>;</div><div class="line">tag.style.border = <span class="string">"10px solid red"</span>;</div><div class="line"></div><div class="line"><span class="comment">//This is better.</span></div><div class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.getElementById(<span class="string">"highlight"</span>);</div><div class="line">tag.classList.add(<span class="string">"some-class"</span>);</div></pre></td></tr></table></figure>
-<h3 id="Manipulating-text-and-content"><a href="#Manipulating-text-and-content" class="headerlink" title="Manipulating text and content"></a>Manipulating text and content</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">	This is an <span class="tag">&lt;<span class="name">string</span>&gt;</span>awesome<span class="tag">&lt;/<span class="name">string</span>&gt;</span> paragraph</div><div class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tag = <span class="built_in">document</span>.querySelector(<span class="string">"p"</span>);</div><div class="line"><span class="built_in">console</span>.log(tag.textContent)  </div><div class="line"><span class="comment">// Output: This is an awesome paragraph</span></div><div class="line"><span class="built_in">console</span>.log(tag.innerHTML)	</div><div class="line"><span class="comment">// Output: This is an &lt;stong&gt;awesome&lt;/string&gt; paragraph</span></div></pre></td></tr></table></figure>
-<h3 id="Manipulating-attributes"><a href="#Manipulating-attributes" class="headerlink" title="Manipulating attributes"></a>Manipulating attributes</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"www.google.com"</span>&gt;</span>I am a link<span class="tag">&lt;/<span class="name">a</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"logo.png"</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.querySelector(<span class="string">"a"</span>);</div><div class="line"><span class="built_in">console</span>.log(link.getAttribute(<span class="string">"href"</span>)); <span class="comment">// Output: www.google.com</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> img = <span class="built_in">document</span>.querySelecotr(<span class="string">"img"</span>);</div><div class="line">img.setAttribute(<span class="string">"src"</span>, <span class="string">"corgi.png"</span>);</div></pre></td></tr></table></figure>
-<h3 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> button = <span class="built_in">document</span>.querySelector(<span class="string">"button"</span>);</div><div class="line">button.addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"Clicked the button!"</span>);</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> lis = <span class="built_in">document</span>.querySelectorAll(<span class="string">"li"</span>);</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i &lt; lis.length; i++) &#123;</div><div class="line">	lis[i].addEventListener(<span class="string">"click"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">		<span class="keyword">this</span>.style.color = <span class="string">"pink"</span>;</div><div class="line">	&#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li><a href="https://stackoverflow.com/questions/17047497/what-is-the-difference-between-change-and-input-event-for-an-input-element/17047607#17047607" target="_blank" rel="external">What is the difference between “change” and “input” event for an INPUT element (StackOverflow)</a></li>
-</ul>
-<h2 id="Tips"><a href="#Tips" class="headerlink" title="Tips"></a>Tips</h2><ol>
-<li><code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot; async&gt;&lt;/script&gt;</code><ul>
-<li><code>&lt;head&gt;</code>안에서 <code>&lt;script type=&quot;text/javascript&quot; src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>로 스크립트 파일을 불러오면 다 불러오기 전까지 다음 코드로 진행하지 않거나 HTML 엘리먼트를 선택하는 스크립트가 있다면 오류가 발생한다. 이를 보완하기 위해 <code>async</code>, <code>defer</code> 속성을 지원하게 되었으며 IE10 미만에서는 지원하지 않기 때문에 <body> 태그의 마지막 부분에서 스크립트 파일들을 호출하기도 한다.</body></li>
-<li><a href="https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup" target="_blank" rel="external">Where should I put script tags in HTML markup?  (StackOverflow)</a></li>
-<li><a href="https://developers.google.com/speed/docs/insights/BlockingJS" target="_blank" rel="external">Remove Render-Blocking JavaScript (Google Developers)</a></li>
-</ul>
-</li>
-</ol>
-]]></content>
+        <div class="post-tags">
+          
+            <a href="/tags/basic/" rel="tag"># basic</a>
+          
+            <a href="/tags/scala/" rel="tag"># scala</a>
+          
+        </div>
       
-        <categories>
-            
-            <category> Javascript </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> javascript </tag>
-            
-            <tag> basic </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[마크다운(Markdown) 참고자료]]></title>
-      <url>/2017/07/12/markdown-cheatsheet/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>앞으로 블로그 글 작성을 위해 <a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="external">GitHub Markdown</a>을 참고하여 정리했습니다.</p>
-</blockquote>
-<h1 id="Markdown-Cheatsheet"><a href="#Markdown-Cheatsheet" class="headerlink" title="Markdown Cheatsheet"></a>Markdown Cheatsheet</h1><h2 id="Headers"><a href="#Headers" class="headerlink" title="Headers"></a>Headers</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># H1</div><div class="line">## H2</div><div class="line">### H3</div><div class="line">#### H4</div><div class="line">##### H5</div><div class="line">###### H6</div></pre></td></tr></table></figure>
-<h1 id="H1"><a href="#H1" class="headerlink" title="H1"></a>H1</h1><h2 id="H2"><a href="#H2" class="headerlink" title="H2"></a>H2</h2><h3 id="H3"><a href="#H3" class="headerlink" title="H3"></a>H3</h3><p>…</p>
-<h2 id="Emphasis"><a href="#Emphasis" class="headerlink" title="Emphasis"></a>Emphasis</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">*italics*, _italics_</div><div class="line">**bold**, __bold__</div><div class="line">**bold and __italics__**</div><div class="line">~~strike~~</div></pre></td></tr></table></figure>
-<p><em>italics</em>, <em>italics</em><br><strong>bold</strong>, <strong>bold</strong><br><strong>bold and <strong>italics</strong></strong><br><del>strike</del></p>
-<h2 id="Lists"><a href="#Lists" class="headerlink" title="Lists"></a>Lists</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">1. One</div><div class="line">2. Two</div><div class="line">  1. One</div><div class="line">3. Three</div><div class="line">  * content</div><div class="line"></div><div class="line">- title</div><div class="line">  - content</div></pre></td></tr></table></figure>
-<ol>
-<li>One</li>
-<li>Two<ol>
-<li>One</li>
-</ol>
-</li>
-<li>Three<ul>
-<li>content</li>
-</ul>
-</li>
-</ol>
-<ul>
-<li>title<ul>
-<li>content</li>
-</ul>
-</li>
-</ul>
-<h2 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![Unsplash Source](Unsplash Source.jpg)</div></pre></td></tr></table></figure>
-<p><img src="Unsplash Source.jpg" alt="Unsplash Source"></p>
-<h2 id="Links"><a href="#Links" class="headerlink" title="Links"></a>Links</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[GitHub Markdown](https://guides.github.com/features/mastering-markdown)</div></pre></td></tr></table></figure>
-<p><a href="https://guides.github.com/features/mastering-markdown" target="_blank" rel="external">GitHub Markdown</a></p>
-<h2 id="Blockquotes"><a href="#Blockquotes" class="headerlink" title="Blockquotes"></a>Blockquotes</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; A block quotation (also known as a long quotation or extract) is a quotation in a written document that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size font. - In [Wikipedia](https://en.wikipedia.org/wiki/Block_quotation)</div></pre></td></tr></table></figure>
-<blockquote>
-<p>A block quotation (also known as a long quotation or extract) is a quotation in a written document that is set off from the main text as a paragraph, or block of text, and typically distinguished visually using indentation and a different typeface or smaller size font. - In <a href="https://en.wikipedia.org/wiki/Block_quotation" target="_blank" rel="external">Wikipedia</a></p>
-</blockquote>
-<h2 id="Inline-code"><a href="#Inline-code" class="headerlink" title="Inline code"></a>Inline code</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Hello, `This is inline code.`</div></pre></td></tr></table></figure>
-<p>Hello, <code>This is inline code.</code></p>
-<h2 id="Horizontal-Rule"><a href="#Horizontal-Rule" class="headerlink" title="Horizontal Rule"></a>Horizontal Rule</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">---</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="Syntax-highlighting"><a href="#Syntax-highlighting" class="headerlink" title="Syntax highlighting"></a>Syntax highlighting</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">```java</div><div class="line">public void printHelloWorld() &#123;</div><div class="line">  System.out.println(&quot;Hello, World!&quot;);</div><div class="line">&#125;</div><div class="line">```</div></pre></td></tr></table></figure>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">printHelloWorld</span><span class="params">()</span> </span>&#123;</div><div class="line">  System.out.println(<span class="string">"Hello, World!"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">항목1 | 가운데 정렬 | 오른쪽 정렬</div><div class="line">---- | :----: | ----:</div><div class="line">첫번째 | 두번째 | 참고</div><div class="line">세번째 | 네번째 | 비고</div></pre></td></tr></table></figure>
-<table>
-<thead>
-<tr>
-<th>항목1</th>
-<th style="text-align:center">가운데 정렬</th>
-<th style="text-align:right">오른쪽 정렬</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>첫번째</td>
-<td style="text-align:center">두번째</td>
-<td style="text-align:right">참고</td>
-</tr>
-<tr>
-<td>세번째</td>
-<td style="text-align:center">네번째</td>
-<td style="text-align:right">비고</td>
-</tr>
-</tbody>
-</table>
-]]></content>
+
       
-        <categories>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-            <category> Etc </category>
+              <a href="/2017/07/25/jquery-basics/" rel="next" title="제이쿼리(jQuery) 기초">
+                <i class="fa fa-chevron-left"></i> 제이쿼리(jQuery) 기초
+              </a>
             
-        </categories>
-        
-        
-        <tags>
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            <tag> markdown </tag>
-            
-            <tag> cheatsheet </tag>
-            
-            <tag> blog </tag>
-            
-        </tags>
-        
-    </entry>
-    
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
   
   
-</search>
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Jihoon Ko" />
+            
+              <p class="site-author-name" itemprop="name">Jihoon Ko</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="http://blog.jhko.me/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Scala-Basics"><span class="nav-number">1.</span> <span class="nav-text">Scala Basics</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Terms-And-Types"><span class="nav-number">1.1.</span> <span class="nav-text">Terms And Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Definitions-And-Evaluation"><span class="nav-number">1.2.</span> <span class="nav-text">Definitions And Evaluation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Evaluation-strategy"><span class="nav-number">1.2.1.</span> <span class="nav-text">Evaluation strategy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Functional-Loops"><span class="nav-number">1.3.</span> <span class="nav-text">Functional Loops</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lexical-Scopes"><span class="nav-number">1.4.</span> <span class="nav-text">Lexical Scopes</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Writing-executable-programs"><span class="nav-number">1.4.1.</span> <span class="nav-text">Writing executable programs</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nested-functions"><span class="nav-number">1.4.2.</span> <span class="nav-text">Nested functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Tail-Recursion"><span class="nav-number">1.5.</span> <span class="nav-text">Tail Recursion</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Structuring-Information"><span class="nav-number">1.6.</span> <span class="nav-text">Structuring Information</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Sealed-traits"><span class="nav-number">1.6.1.</span> <span class="nav-text">Sealed traits</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Pattern-matching"><span class="nav-number">1.6.2.</span> <span class="nav-text">Pattern matching</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Equals"><span class="nav-number">1.6.3.</span> <span class="nav-text">Equals</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Enumerations"><span class="nav-number">1.6.4.</span> <span class="nav-text">Enumerations</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Higher-Order-Functions"><span class="nav-number">1.7.</span> <span class="nav-text">Higher Order Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Anonymous-Functions"><span class="nav-number">1.7.1.</span> <span class="nav-text">Anonymous Functions</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Standard-Library"><span class="nav-number">1.8.</span> <span class="nav-text">Standard Library</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#List"><span class="nav-number">1.8.1.</span> <span class="nav-text">List</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Common-Operations-on-Lists"><span class="nav-number">1.8.1.1.</span> <span class="nav-text">Common Operations on Lists</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Optional-Values"><span class="nav-number">1.8.2.</span> <span class="nav-text">Optional Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Error-Handling"><span class="nav-number">1.8.3.</span> <span class="nav-text">Error Handling</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Syntactic-Conveniences"><span class="nav-number">1.9.</span> <span class="nav-text">Syntactic Conveniences</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String-Interpolation"><span class="nav-number">1.9.1.</span> <span class="nav-text">String Interpolation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Tuples"><span class="nav-number">1.9.2.</span> <span class="nav-text">Tuples</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Functions-as-Objects"><span class="nav-number">1.9.3.</span> <span class="nav-text">Functions as Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FOR-Expressions"><span class="nav-number">1.9.4.</span> <span class="nav-text">FOR Expressions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Method’s-Parameters"><span class="nav-number">1.9.5.</span> <span class="nav-text">Method’s Parameters</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Type-Aliases"><span class="nav-number">1.9.6.</span> <span class="nav-text">Type Aliases</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-Oriented-Programming"><span class="nav-number">1.10.</span> <span class="nav-text">Object Oriented Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Class"><span class="nav-number">1.10.1.</span> <span class="nav-text">Class</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Methods"><span class="nav-number">1.10.2.</span> <span class="nav-text">Methods</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Abstraction"><span class="nav-number">1.10.3.</span> <span class="nav-text">Data Abstraction</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Self-Reference-Preconditions-Assertions"><span class="nav-number">1.10.4.</span> <span class="nav-text">Self Reference, Preconditions, Assertions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Constructors"><span class="nav-number">1.10.5.</span> <span class="nav-text">Constructors</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Classes-and-Substitutions"><span class="nav-number">1.10.6.</span> <span class="nav-text">Classes and Substitutions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operators"><span class="nav-number">1.10.7.</span> <span class="nav-text">Operators</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Abstract-Classes"><span class="nav-number">1.10.8.</span> <span class="nav-text">Abstract Classes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Definitions"><span class="nav-number">1.10.9.</span> <span class="nav-text">Object Definitions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Dynamic-Binding"><span class="nav-number">1.10.10.</span> <span class="nav-text">Dynamic Binding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Trait"><span class="nav-number">1.10.11.</span> <span class="nav-text">Trait</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Scala’s-Class-Hierarchy"><span class="nav-number">1.10.12.</span> <span class="nav-text">Scala’s Class Hierarchy</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Imperative-Programming"><span class="nav-number">1.11.</span> <span class="nav-text">Imperative Programming</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Reminder-Substitution-Model"><span class="nav-number">1.11.1.</span> <span class="nav-text">Reminder: Substitution Model</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Stateful-Object"><span class="nav-number">1.11.2.</span> <span class="nav-text">Stateful Object</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Implementation-of-State"><span class="nav-number">1.11.3.</span> <span class="nav-text">Implementation of State</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#State-in-Objects"><span class="nav-number">1.11.4.</span> <span class="nav-text">State in Objects</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Identity-and-Change"><span class="nav-number">1.11.5.</span> <span class="nav-text">Identity and Change</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Operational-Equivalence"><span class="nav-number">1.11.6.</span> <span class="nav-text">Operational Equivalence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Imperative-Loops"><span class="nav-number">1.11.7.</span> <span class="nav-text">Imperative Loops</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Classes-VS-Case-Classes"><span class="nav-number">1.12.</span> <span class="nav-text">Classes VS Case Classes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Polymorphic-Types"><span class="nav-number">1.13.</span> <span class="nav-text">Polymorphic Types</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Lazy-Evaluation"><span class="nav-number">1.14.</span> <span class="nav-text">Lazy Evaluation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Type-Classes"><span class="nav-number">1.15.</span> <span class="nav-text">Type Classes</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-thumbs-o-up"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jihoon Ko</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://jhko.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://blog.jhko.me/2017/11/27/scala-basics/';
+          this.page.identifier = '2017/11/27/scala-basics/';
+          this.page.title = '스칼라(Scala) 기초';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jhko.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

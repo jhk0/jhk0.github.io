@@ -8,14 +8,21 @@
 
     <url>
         <loc>http://blog.jhko.me/categories/Etc/</loc>
-        <lastmod>2017-07-20T06:59:18.000Z</lastmod>
+        <lastmod>2017-11-26T17:39:27.013Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
         <loc>http://blog.jhko.me/categories/Javascript/</loc>
-        <lastmod>2017-07-25T15:42:03.000Z</lastmod>
+        <lastmod>2017-11-26T17:39:47.772Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://blog.jhko.me/categories/Scala/</loc>
+        <lastmod>2017-11-26T17:45:57.617Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
